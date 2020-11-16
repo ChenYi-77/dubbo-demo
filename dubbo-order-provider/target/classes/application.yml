@@ -1,0 +1,16 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: order-provider
+dubbo:
+  application:
+    name: order-provider
+  scan:
+    # 接口实现者（服务实现）包
+    base-packages: com.dubbo.demo.provider.impl
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
